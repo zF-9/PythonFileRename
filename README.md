@@ -3,9 +3,10 @@ python open-cv image to text file renamer
 
 
  ## Project Requirements ##
-    - Python 3.X.X [Official website](https://www.python.org/downloads/windows/)
+    - Python 3.X.X 
     - Open-CV 
     - PyTesseract
+[Python Official website](https://www.python.org/downloads/windows/)
 
   ### Install OpenCV
   ```
