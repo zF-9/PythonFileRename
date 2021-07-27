@@ -29,13 +29,13 @@ python open-cv image to text file renamer
   ```
   
    ## #4 Execution
-    - clone Repository 
+    1. clone Repository 
       ```
         git clone https://github.com/zF-9/PythonFileRename.git
       ```
       or download the .zip folder
-    - Pyhton must be installed in the system; pip command will be available after succesful installation of python
-    - Go To <dir>..\test-py\FileRenamer.py<dir>; Open with any IDE (*right click > open with IDLE[python IDE])
-    - Change the *root_dir* variable to local directory
-    - Run Command (*F5)
-    - optional: change file format to process other types of images
+    2. Pyhton must be installed in the system; pip command will be available after succesful installation of python
+    3. Go To <dir>..\test-py\FileRenamer.py<dir>; Open with any IDE (*right click > open with IDLE[python IDE])
+    4. Change the *root_dir* variable to local directory
+    5. Run Command (*F5)
+    6. optional: change file format to process other types of images
