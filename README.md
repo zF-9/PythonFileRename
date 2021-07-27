@@ -8,12 +8,12 @@ python open-cv image to text file renamer
     - PyTesseract
 [Python Official website: Source Download](https://www.python.org/downloads/windows/)
 
-  ### Install OpenCV (Linux/Windows)
+  ### #1 Install OpenCV (Linux/Windows)
   ```
   pip install opencv-python
   ```
   
-   ### Getting the PyTesseract sources
+   ### #2 Getting the PyTesseract sources
    #### For Linux
   ``` 
   sudo apt-get update
@@ -23,12 +23,12 @@ python open-cv image to text file renamer
    #### For Windows
   [Source Download to windows x32/x64 Installer](https://github.com/UB-Mannheim/tesseract/wiki)
   
-  ### Install PyTesseract (Linux/Windows)
+  ### #3 Install PyTesseract (Linux/Windows)
   ```
     pip install pytesseract
   ```
   
-   ## Execution
+   ## #4 Execution
     - clone Repository 
       ```
         git clone https://github.com/zF-9/PythonFileRename.git
