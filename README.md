@@ -40,7 +40,7 @@ python open-cv image to text file renamer
   ### Demo 
   <img src="https://github.com/zF-9/PythonFileRename/blob/ae10357ed56ebfe02b4a9ab26ba11afa01ffb9b0/orig_images/PythonRenamer.gif">
   
-    ### Limitation
+   ### Limitation
     - script requires good quality image
     - handwriting may not be converted correctly 
     - works perfectly only on screenshoted digital certificate 
