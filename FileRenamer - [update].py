@@ -12,12 +12,26 @@ import os.path
 from os import path
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
-root_dir = r'C:\Users\Fauzi\Desktop\to_convert'
+root_dir = r'C:\Users\Fauzi\Desktop\to_convert\un-opencv'
 #r'C:\Users\Fauzi\Desktop\to_convert'
 #r'C:\Users\Fauzi\Documents\PythonFileRename\test-py'
 
-file_format = ".jpg" #change format globally , eg: .png/.jpeg/.jpg
+file_format = ".png" #change format globally , eg: .png/.jpeg/.jpg
+#ic = ' '
+#numbers = []
+#new_ic = ''
+#file_ic = ''
 
+
+#def get_ic():
+
+        #for i in numbers:
+            #print(numbers[i])
+            #print(len(numbers[i]))
+            #print(len(str(numbers[i])))
+            #if len(str(numbers[i])) == 12:
+            #    ic = str(numbers[i])
+            #    return ic
 
 # .FILE FORMAT CHANGEABLE
 for filename in glob.iglob(root_dir + '**/*' + file_format, recursive=True):
@@ -59,7 +73,11 @@ for filename in glob.iglob(root_dir + '**/*' + file_format, recursive=True):
     filter12 = filter11.replace('© LTE* il” 53% o™ @: emo” s as ema', '')
     filter13 = filter12.replace('sijil','')
     filter14 = filter13.replace('vaksin', '')
-    final = filter14.replace('Vaksinasi', '')
+    filter15 = filter14.replace('Check-In Maklumat Check-in Lokasi Servay Express - Kimanis Nama', '')
+    filter16 = filter15.replace('12:17PTG & ace il © 944 953%', '')
+    filter17 = filter16.replace('18:55 fas @--- Os GD', '')
+    filter18 = filter17.replace('oOo "oo" e Oo e', '')
+    final = filter18.replace('Vaksinasi', '')
 
     #filter_chars = ['Digital','Certificate','Sijil','COVID-19','COVID-1 9',
     #                'wl 4G @ ) Profile —','Cerifcate','Vaksinasi',';', ':',
@@ -128,20 +146,42 @@ for filename in glob.iglob(root_dir + '**/*' + file_format, recursive=True):
         else:
             print("ok rename la nama dia") 
             os.rename(filename, new_name)
-    else:
+    else:  
+        if len(numbers) == 1:
+            #print(len(numbers))
+            #print(numbers[0])
+            ic = str(numbers[0])
+        else:
+            if len(str(numbers[0])) == 12:
+                ic = str(numbers[0])
+            else:
+                #print(len(numbers))
+                #print(numbers[1])
+                ic = str(numbers[1])
+            
         #for i in numbers:
             #print(i)
-            #if i == 12:
-                #ic = str(numbers[i])
-                #print(ic)
-                #file_ic = root_dir + '\\' + ic  + '.png'
-                #new_ic = ic + '.png'
-                
-                
-        ic = str(numbers[0])
+            #if len(str(numbers[i])) != 12:
+            #    ic = str(numbers[i])
+            #    print(ic)
+            #    file_ic = root_dir + '\\' + ic  + '.png'
+            #    new_ic = ic + '.png'
+            #else:
+            #    file_name = root_dir + '\\' + user + '.png'
+            #    new_name = user + '.png'                
+            #    print("boleh la rename sudah")
+            #    os.rename(filename, new_name)
+                #goto end
+        #if len(str(numbers[0])) != 12:
+            #ic = str(numbers[1])
+        
+        #file_ic = root_dir + '\\' + ic  + '.png'
+        #new_ic = ic + '.png'
+
         file_ic = root_dir + '\\' + ic  + '.png'
         new_ic = ic + '.png'
-        print("extracted-output-image: " + ic)
+        print("extracted-output-image: " + ic)     
+        
         if path.isfile(new_ic):
             print("read_file: " + filename)
             print("target_file: " + file_ic)
@@ -158,5 +198,10 @@ for filename in glob.iglob(root_dir + '**/*' + file_format, recursive=True):
             print("ok rename la IC dia")
             os.rename(filename, new_ic)
 
+        #label: end
+        #print("successful")
+
     print("###############################################################################")
 
+
+    
